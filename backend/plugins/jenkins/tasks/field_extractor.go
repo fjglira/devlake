@@ -47,7 +47,7 @@ type BuildExtractionContext struct {
 // NewFieldExtractor compiles scope-config extraction rules.
 func NewFieldExtractor(scopeConfig *models.JenkinsScopeConfig, logger log.Logger) (*FieldExtractor, errors.Error) {
 	if scopeConfig == nil || len(scopeConfig.FieldExtractors) == 0 {
-		return &FieldExtractor{}, nil
+		return nil, nil
 	}
 
 	extractor := &FieldExtractor{
@@ -156,6 +156,7 @@ func resolveBuildSourceValue(ctx *BuildExtractionContext, source string) string 
 }
 
 // ExtractBuildParameters reads parameter actions from a Jenkins build API response.
+// If multiple actions contain parameters with the same name, the last value wins.
 func ExtractBuildParameters(body *models.ApiBuildResponse) map[string]string {
 	parameters := make(map[string]string)
 	if body == nil {

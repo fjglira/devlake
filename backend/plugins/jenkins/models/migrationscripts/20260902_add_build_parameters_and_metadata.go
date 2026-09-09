@@ -52,7 +52,7 @@ func (*addBuildParametersAndMetadata) Up(baseRes context.BasicRes) errors.Error 
 }
 
 func (*addBuildParametersAndMetadata) Version() uint64 {
-	return 20250902100001
+	return 20260902100001
 }
 
 func (*addBuildParametersAndMetadata) Name() string {

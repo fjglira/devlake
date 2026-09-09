@@ -297,7 +297,7 @@ tables in the same slice.
 - `backend/plugins/jenkins/models/field_extractor_rule.go`
 - `backend/plugins/jenkins/models/scope_config.go`
 - `backend/plugins/jenkins/models/response.go`
-- `backend/plugins/jenkins/models/migrationscripts/20250902_add_build_parameters_and_metadata.go`
+- `backend/plugins/jenkins/models/migrationscripts/20260902_add_build_parameters_and_metadata.go`
 - `backend/plugins/jenkins/models/migrationscripts/register.go`
 - `backend/plugins/jenkins/tasks/build_collector.go`
 - `backend/plugins/jenkins/tasks/build_extractor.go`
@@ -316,7 +316,7 @@ to `FAILURE` in `cicd_pipelines.result` while preserving `original_result`.
 
 **Upstream status:** Pending — generic Jenkins enrichment; candidate for upstream PR.
 **Upstream PR:** none yet
-**Owner:** OSSM / DevProd team
+**Owner:** @fjglira
 
 **Rebase notes:** Touches build collection tree query, build extractor, and CICD
 converter result mapping. Watch for upstream changes to `build_collector.go` and
